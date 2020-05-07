@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+a{
+    color: #000;
+    text-decoration: none; /*убирает подчеркивание*/
+    display: inline-block;/*позволяет сделать ссылку блочной 
+    и она будет занимать только текстовую часть */
+}
+
+body {
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    line-height: 24px;
+    color: #4a6385;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto; /*выравнивает контент по центру*/
+    padding: 0 15px;/*добавляет 15 пикселей по краям для мобильной версии*/
+}
+.header{
+    border-top: 1px solid #2b7ce8;
+}
+.header__inner {
+    display: flex;/* ставит лого и эл-ты меню в одну линию*/
+    justify-content: space-between; /* добавляет расстояние между лого и списком меню*/
+    align-items: center;/*выравнивает содержимое блока по центру*/
+    min-height: 87px;/*указываем высоту блока центрирования*/
+}
+.menu__list{
+    display: flex;     /*Развернуть в одну линию элементы меню */
+}
+.menu__list li{
+    margin-left: 38px; /*отступы между эл-ми меню */
+}
+.menu__list a{
+    font-style: 14px; /*размер меню*/
+    color: #2f3f54;/*цвет ссылок меню*/
+    font-weight: 700;/* Bold размер700*/
+    font-family: 'Open Sans', sans-serif;
+}
+.top{ /*задаем парамертры для всего блока*/
+    background-color: #2b7ce8;
+    padding-top: 150px;/*внутренний отступ до контента сверху*/
+    padding-bottom: 180px;/*внутренний отступ для контента снизу*/
+
+}
+.top__inner{
+display: flex;
+}
+
+.top-info {
+    max-width: 555px;
+    margin-right: 35px;
+    color: #fff;
+    }
+
+.top-nfo__title {
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+.top-info-descr {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 52px;
+  
+}
+.top-info-descr span {
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+    font-weight: 400;
+    margin-bottom: 35px;
+
+}
+.top-info__list {
+list-style: none;
+margin-bottom: 50px;
+}
+.top-info__list li {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;/* 24+3px  для того чтобы длинная строка с текстом
+     отличалась от следующено пункта*/
+    margin-bottom: 3px;
+    position: relative;
+    padding-left: 24px;
+}
+
+.top-info__list li::before{/* для вставки доп элементов перед строками*/
+    content: "";
+    background-image: url(../images/list-icon.png);
+    width: 13px;/* обязательно указывается ширина и высота*/
+    height: 13px;/* т.к. в css нет значений по умолчанию*/
+    position: absolute;
+    left: 0;
+    top: 50%; /*работает только при position */
+    transform: translateY(-50%);
+}
+
+
+.top-info__btn {
+    color: #fff;
+    text-transform: uppercase;
+    border: 3px solid #fff;
+    padding: 13px 44px;
+    border-radius: 30px;
+    margin-bottom: 15px;
+
+
+}
+
+.top-images {
+}
+.top-images__box {
+    position: relative;/*выставляем позиционирование круга 
+    относительно данного блока*/
+}
+.top-images__circle {
+    width: 230px;
+    height: 230px;
+    background-color: #fff;
+    border-radius: 50%;/*сделали из квадрата круг*/
+    display: flex;
+    flex-direction: column;/*сделали элементы вертикально*/
+    justify-content: center;/*поместили элементы по центру*/
+    align-items: center;/*разместили в центре круга*/
+    font-size: 14px;
+    color: #212121;
+    position: absolute;
+    top: -65px;/*выравниваем круг*/
+    right: -60px;/*выравниваем круг*/
+
+}
+.topo-images__title {
+    margin-bottom: 10px;
+    text-align: left;
+    width: 140px;/*задаем ширину, чтобы выровнять по левому краю*/
+    
+}
+.topo-images__price {
+    font-size: 54px;
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 5px;
+}
+.topo-images__date {
+    text-align: right;
+    width: 140px;/*задаем ширину, чтобы выровнять по правому краю*/
+}
